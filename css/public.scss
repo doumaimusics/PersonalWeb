@@ -1,0 +1,122 @@
+//清除浏览器默认的margin，padding值
+body, p, h1, h2, h3, h4, h5, h6, span, label, input, i, ul, li, dl, dt, dd, ol, select, option, table, tr, td, tt, th, tbody, strong, textarea {   
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+    
+//h1~~~~~~~~~h6的默认字体样式
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+
+//设置网页字体
+body{font-family: arial,verdana,helvetica,sans-serif,"微软雅黑";}
+
+//当用户点击iOS的Safari浏览器链接 去除默认的背景颜色
+a{
+    -webkit-tap-highlight-color: transparent;
+     text-decoration: none;
+}
+
+//去掉图片默认边框
+img{border: none;}
+
+//去除i,em标签的默认样式
+i,em{font-style: normal;}
+
+//去除表单的默认样式
+input,label,select,option,textarea{
+    border: none;
+    outline: none;
+    -webkit-appearance: none;//去除按钮的默认样式
+    -webkit-tap-highlight-color: rgba(0,0,0,0);//移动端去除点击表单元素时默认的背景
+    -webkit-tap-highlight-color: transparent; //移动端去除点击表单元素时默认的背景
+}
+//定位的宏
+@mixin zuoyou{    //左右居中定位
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+@mixin shangxia{  //上下居中定位
+    position:absolute;
+    top:0;bottom:0;
+    margin:auto;
+}
+@mixin zhong{ //正中间定位
+    position:absolute;
+    left:0;top:0;
+    right:0;bottom:0;
+    margin:auto;
+}
+@mixin gai{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;top:0;
+    margin: auto;
+}
+//公用居中
+.m-cenger{
+    width: 1200px;
+    margin: 0 auto;
+}
+/*清楚浮动*/
+.clearfix {
+    zoom: 1; }
+
+.clearfix:after {
+    content: '.';
+    display: block;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    visibility: hidden; }  
+    .g-main{
+    width: 100%;
+    height: 100%;
+    background: #E6E6E6;
+    position:relative;
+}
+  
+//公用顶部
+.g-hd{
+    width: 100%;
+    height: 50px;
+    background: #404A58;
+    position:fixed;
+    top:0;left:0;
+    .m-nav{
+        height: 100%;
+         color: #fff;
+         font-size: 16px;
+        .u-nav-list{
+            width: 80%;
+            height: 100%;
+            float: left;
+            a{
+              display: block;
+              float: left;
+              line-height: 50px;
+              padding:0 15px ;  
+             color: #fff; 
+             margin-right: 5px;
+            }
+        }
+        .u-name{
+            width: 20%;
+            height: 100%;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+          
+        }
+    }
+}
+//公用中间
+.g-bd{
+    width: 100%;
+  height: auto;
+  position:absolute;
+  top:50px;
+  left: 0;
+}
